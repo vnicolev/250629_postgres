@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS student (
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-create-table
 
+---
 
 ## 新增資料的語法
 
@@ -45,6 +46,7 @@ VALUES ('王小柱', '生物'), ('陳信忠', '英文');
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-insert
 
+---
 
 ## 選取資料的語法
 
@@ -105,6 +107,7 @@ LIMIT
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-subquery
 
+---
 
 ## 刪除資料表的語法
 
