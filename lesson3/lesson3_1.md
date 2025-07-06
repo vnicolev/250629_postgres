@@ -20,3 +20,18 @@ CREATE TABLE IF NOT EXISTS student (
 ```
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-create-table
+
+## 刪除資料表的語法
+
+```sql
+DROP TABLE [IF EXISTS] table_name
+[CASCADE | RESTRICT];
+```
+
+### 範例: 刪除 student 的資料表
+
+```sql
+DROP TABLE IF EXISTS student;
+```
+
+資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-drop-table
