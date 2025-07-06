@@ -48,6 +48,29 @@ VALUES ('王小柱', '生物'), ('陳信忠', '英文');
 
 ---
 
+## 更新資料的語法
+
+```sql
+UPDATE table_name
+SET column1 = value1,
+    column2 = value2,
+    ...
+WHERE condition;
+```
+
+### 範例: 在 student 資料表更新一筆資料
+
+```sql
+UPDATE student
+SET name = '王阿柱',
+    major = '物理'
+WHERE student = 2;
+```
+
+資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-update
+
+---
+
 ## 選取資料的語法
 
 ```sql
