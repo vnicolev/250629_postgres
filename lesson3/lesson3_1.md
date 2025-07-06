@@ -171,3 +171,23 @@ DROP TABLE IF EXISTS student;
 ```
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-drop-table
+
+---
+
+## 更改資料列類型的語法
+
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name
+[SET DATA] TYPE new_data_type;
+```
+
+### 範例: 將 world 的日期改為 DATE 且轉換現有資料
+
+```sql
+ALTER TABLE world
+ALTER COLUMN 日期 TYPE DATE
+USING 日期::DATE;
+```
+
+資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-change-column-type
