@@ -46,6 +46,66 @@ VALUES ('王小柱', '生物'), ('陳信忠', '英文');
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-insert
 
 
+## 選取資料的語法
+
+```sql
+SELECT
+  select_list
+FROM
+  table1
+WHERE
+  columnA operator (
+    SELECT
+      columnB
+    FROM
+      table2
+    WHERE
+      condition
+  )
+ORDER BY
+  columnB;
+```
+
+### 範例: 選取 student 的資料
+
+```sql
+SELECT
+  *
+FROM
+  student
+WHERE
+  name='呂育君';
+```
+```sql
+SELECT
+  name, major
+FROM
+  student
+WHERE
+  name='呂育君';
+```
+```sql
+SELECT
+  *
+FROM
+  student
+ORDER BY
+  student_id ASC;
+```
+```sql
+SELECT
+  name, major
+FROM
+  student
+ORDER BY
+  student_id DESC
+LIMIT
+  3;
+```
+
+資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-subquery
+
+
 ## 刪除資料表的語法
 
 ```sql
