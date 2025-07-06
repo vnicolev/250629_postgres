@@ -64,10 +64,35 @@ WHERE condition;
 UPDATE student
 SET name = '王阿柱',
     major = '物理'
-WHERE student = 2;
+WHERE student_id = 2;
 ```
 
 資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-update
+
+---
+
+## 刪除資料的語法
+
+```sql
+DELETE FROM table_name
+WHERE condition;
+```
+
+### 範例: 在 student 資料表刪除一筆資料
+
+```sql
+DELETE FROM student
+WHERE student_id = 2;
+```
+
+### 範例: 在 student 資料表刪除多筆資料
+
+```sql
+DELETE FROM student
+WHERE major in ('歷史', '英文');
+```
+
+資料來源: https://neon.com/postgresql/postgresql-tutorial/postgresql-delete
 
 ---
 
