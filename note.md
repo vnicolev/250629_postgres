@@ -42,6 +42,14 @@ Extensions:
 
 download link: https://code.visualstudio.com/download
 
+
+### GitHub
+
+``` bash
+git config --global user.name "{name}"
+git config --global user.email "{email}"
+```
+
 ### Node.js
 
 download link: https://nodejs.org/zh-tw/download
