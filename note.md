@@ -8,7 +8,7 @@ docker run -it --name python-miniconda continuumio/miniconda3
 ```
 ```
 # 內建 conda, node.js, uv 以提供 mcp 使用
-docker run -it --name python-postgres roberthsu2003/conda_uv_npx
+docker run -it --platform linux/arm64 --name python-postgres roberthsu2003/conda_uv_npx
 ```
 download link: https://www.docker.com/get-started/
 
