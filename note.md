@@ -27,7 +27,7 @@ download link: https://dbeaver.io/download/
       "args": [
         "-y",
         "@modelcontextprotocol/server-postgres",
-        "postgresql://postgresql:password@localhost:5432/postgresql"
+        "postgresql://postgres:password@localhost:5432/postgres"
       ]
     }
   }
