@@ -35,7 +35,8 @@ CREATE TABLE public.每日各站進出站人數 (
 	車站代碼 int4 NULL,
 	進站人數 int4 NULL,
 	出站人數 int4 NULL,
-	CONSTRAINT 每日各站進出站人數_車站代碼_fkey FOREIGN KEY (車站代碼) REFERENCES public.台鐵車站資訊("stationCode") ON DELETE SET NULL
+	CONSTRAINT 每日各站進出站人數_車站代碼_fkey FOREIGN KEY (車站代碼) REFERENCES public.台鐵車站資訊("stationCode")
+        ON DELETE SET NULL
 );
 ```
 
@@ -47,5 +48,7 @@ ALTER TABLE PUBLIC."台鐵車站資訊"
 ADD CONSTRAINT "台鐵車站資訊_pkey" PRIMARY KEY ("stationCode")
 
 ALTER TABLE PUBLIC."每日各站進出站人數"
-ADD CONSTRAINT "每日各站進出站人數_車站代碼_fkey" FOREIGN KEY ("車站代碼") REFERENCES public."台鐵車站資訊"("stationCode") ON DELETE SET null ON UPDATE CASCADE;
+ADD CONSTRAINT "每日各站進出站人數_車站代碼_fkey" FOREIGN KEY ("車站代碼") REFERENCES public."台鐵車站資訊"("stationCode")
+ON DELETE SET null
+ON UPDATE CASCADE;
 ```
