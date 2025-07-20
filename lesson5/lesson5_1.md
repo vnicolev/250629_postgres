@@ -38,3 +38,14 @@ CREATE TABLE public.每日各站進出站人數 (
 	CONSTRAINT 每日各站進出站人數_車站代碼_fkey FOREIGN KEY (車站代碼) REFERENCES public.台鐵車站資訊("stationCode") ON DELETE SET NULL
 );
 ```
+
+如果匯入`台鐵車站資訊`和`每日各站進出站人數`後發現關聯性沒有建立
+則可以使用以下語法建立關聯性
+
+```sql
+ALTER TABLE PUBLIC."台鐵車站資訊"
+ADD CONSTRAINT "台鐵車站資訊_pkey" PRIMARY KEY ("stationCode")
+
+ALTER TABLE PUBLIC."每日各站進出站人數"
+ADD CONSTRAINT "每日各站進出站人數_車站代碼_fkey" FOREIGN KEY ("車站代碼") REFERENCES public."台鐵車站資訊"("stationCode") ON DELETE SET null ON UPDATE CASCADE;
+```
