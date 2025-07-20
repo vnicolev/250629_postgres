@@ -23,7 +23,12 @@ download link: https://dbeaver.io/download/
 
 ### claude_desktop_config.json
 
+
+Side menu > File > Settings > Developer > Edit config > claude_desktop_config.json
+
 ```json
+// claude_desktop_config.json
+
 {
   "mcpServers": {
     "postgres": {
@@ -37,6 +42,8 @@ download link: https://dbeaver.io/download/
   }
 }
 ```
+
+download link: https://claude.ai/download
 
 ### VScode
 
