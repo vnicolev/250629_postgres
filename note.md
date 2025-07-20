@@ -53,8 +53,29 @@ Extensions:
 
 download link: https://code.visualstudio.com/download
 
+\
 
-### GitHub
+Containers > roberthsu2003/conda_uv_npx > (right click) Attach Visual Studio Code
+Clone repository > (create folder: .vscode) > (create file: mcp.json)
+
+```json
+// mcp.json
+
+{
+  "servers": {
+    "vscode_postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:password@host.docker.internal:5432/postgres"
+      ]
+    }
+  }
+}
+```
+
+\
 
 ``` bash
 git config --global user.name "{name}"
