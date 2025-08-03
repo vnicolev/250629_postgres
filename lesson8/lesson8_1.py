@@ -30,17 +30,30 @@ def connect_to_database():
 def main():
     """主程式"""
     conn = connect_to_database()
-    if not conn:
+    if conn:
+        print("成功連接到資料庫！")
+
+        # 測試連接是否成功
+        cursor = conn.cursor()
+        cursor.execute("SELECT version();")
+        db_version = cursor.fetchone()
+        print(f"PostgreSQL 資料庫版本: {db_version[0]}")
+
+        # 查詢資料庫
+        query = """
+        SELECT count(*) as "筆數"
+        FROM "台鐵車站資訊";
+        """
+        cursor.execute(query)
+        result = cursor.fetchall()
+        if result:
+            print(f"查詢結果: {result[0][0]} 筆資料")
+        else:
+            print("查無資料")
+
+    else:
         print("無法連接到資料庫，程式結束")
         sys.exit(1)
-
-    print("成功連接到資料庫！")
-
-    # 測試連接是否成功
-    cursor = conn.cursor()
-    cursor.execute("SELECT version();")
-    db_version = cursor.fetchone()
-    print(f"PostgreSQL 資料庫版本: {db_version[0]}")
 
     # 關閉連接
     cursor.close()
