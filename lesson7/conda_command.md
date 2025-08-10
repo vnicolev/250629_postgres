@@ -13,7 +13,7 @@ conda create --name {虛擬環境名} python={版本號}
 ## 進入特定虛擬環境
 
 ```bash
-conda active {虛擬環境名}
+conda activate {虛擬環境名}
 ```
 
 ## 退出虛擬環境
