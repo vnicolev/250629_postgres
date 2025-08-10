@@ -99,3 +99,9 @@ postgresql://{$USERNAME}:{$PASSWORD}@{$URL}
 
 * For psycopg2 DB_CONFIG
 postgresql://{$USER}:{$PASSWORD}@{$HOST}/{$DBNAME}
+
+### Install required dependencies
+
+```python
+pip install -r requirement.txt
+```
