@@ -93,4 +93,9 @@ link: https://dashboard.render.com/
 New > Postgres > input: Name, Region=Singapore , Plan Options=free > Create Database
 
 External Database URL
+
+* For DBeaver
 postgresql://{$USERNAME}:{$PASSWORD}@{$URL}
+
+* For psycopg2 DB_CONFIG
+postgresql://{$USER}:{$PASSWORD}@{$HOST}/{$DBNAME}
