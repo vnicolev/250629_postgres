@@ -85,3 +85,12 @@ git config --global user.email "{email}"
 ### Node.js
 
 download link: https://nodejs.org/zh-tw/download
+
+### Create DB via Render
+
+link: https://dashboard.render.com/
+
+New > Postgres > input: Name, Region=Singapore , Plan Options=free > Create Database
+
+External Database URL
+postgresql://{$USERNAME}:{$PASSWORD}@{$URL}
