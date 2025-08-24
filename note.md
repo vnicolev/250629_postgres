@@ -100,6 +100,22 @@ postgresql://{$USERNAME}:{$PASSWORD}@{$URL}
 * For psycopg2 DB_CONFIG
 postgresql://{$USER}:{$PASSWORD}@{$HOST}/{$DBNAME}
 
+* For VScode MCP
+  ```json
+  {
+  "servers": {
+    "render_postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://{$USER}:{$PASSWORD}@{$HOST}/{$DBNAME}?sslmode=require"
+        ]
+      }
+    }
+  }
+  ```
+
 ### Install required dependencies
 
 ```python
